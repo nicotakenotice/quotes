@@ -1,0 +1,11 @@
+:host { display: block; }
+
+span.author {
+  display: inline-block;
+  padding: 0 4px;
+  margin-right: 4px;
+  background-color: #eeeeee;
+  border-radius: 0.25rem;
+  
+  &:last-of-type { margin-right: 0; }
+}
