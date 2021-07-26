@@ -1,17 +1,20 @@
-<h2 data-aos="fade-right">Collection</h2>
+<h2 data-aos="fade-right">
+  <i class="bi bi-grid"></i>
+  <span class="ms-2">Collection</span>
+</h2>
 
 <div class="grid">
-  <div *ngFor="let entry of collection" class="card gi-6 gi-sm-4 p-2" routerLink="/collection/{{entry.slug}}">
+  <div *ngFor="let entry of collection" class="card gi-12 gi-sm-6 gi-md-4 p-2" routerLink="/collection/{{entry.slug}}">
     <div class="d-flex flex-row align-items-center">
-      <div>
-        <i *ngIf="entry.type === 'book'" class="bi bi-book"></i>
-        <i *ngIf="entry.type === 'movie'" class="bi bi-film"></i>
-        <i *ngIf="entry.type === 'manga'" class="bi bi-book-half"></i>
-        <i *ngIf="entry.type === 'anime'" class="bi bi-emoji-laughing"></i>
-        <i *ngIf="entry.type === 'manhwa' || entry.type === 'manhua'" class="bi bi-journal-arrow-down"></i>
+      <div [ngSwitch]="entry.type">
+        <i *ngSwitchCase="'book'" class="bi bi-book"></i>
+        <i *ngSwitchCase="'movie'" class="bi bi-film"></i>
+        <i *ngSwitchCase="'manga'" class="bi bi-book-half"></i>
+        <i *ngSwitchCase="'manhwa' || 'manhua'" class="bi bi-journal-arrow-down"></i>
+        <i *ngSwitchCase="'anime'" class="bi bi-emoji-laughing"></i>
       </div>
       <div class="ms-2">{{entry.title}}</div>
     </div>    
-    <div>by <span *ngFor="let author of entry.authors" class="author">{{author}}</span></div>
+    <div>by <span *ngFor="let author of entry.authors" class="highlight">{{author}}</span></div>
   </div>
 </div>

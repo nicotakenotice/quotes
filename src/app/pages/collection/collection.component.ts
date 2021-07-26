@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Entry } from 'src/app/store/model';
-import { collection } from 'src/app/store/data';
+import { collection, Entry } from 'src/app/store';
 
 @Component({
   selector: 'app-collection',
