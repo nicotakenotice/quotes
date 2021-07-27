@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { collection } from 'src/app/store/data';
-import { Entry } from 'src/app/store/model';
+import { collection, Entry } from 'src/app/store';
 
 @Component({
   selector: 'app-collection-entry',
@@ -9,10 +8,11 @@ import { Entry } from 'src/app/store/model';
   styleUrls: ['./collection-entry.component.scss']
 })
 export class CollectionEntryComponent implements OnInit {
-  selectedEntry?: Entry = undefined;
+  entry?: Entry = undefined;
+
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void { 
-    this.selectedEntry = collection.find(entry => entry.slug === this.route.snapshot.paramMap.get('slug'));
+    this.entry = collection.find(entry => entry.slug === this.route.snapshot.paramMap.get('entrySlug'));
   }
 }

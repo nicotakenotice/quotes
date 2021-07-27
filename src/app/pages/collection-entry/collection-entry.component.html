@@ -1,1 +1,26 @@
-<h2 data-aos="fade-right"><a routerLink="/collection">Collection</a> / {{selectedEntry?.title}}</h2>
+<h2 data-aos="fade-right">
+  <a routerLink="/collection"><i class="bi bi-grid"></i></a>
+  <i class="bi bi-chevron-right ms-2"></i>
+  <span class="ms-2">{{entry?.title}}</span>
+</h2>
+
+<div>
+  <span style="text-transform: capitalize;">{{entry?.type}}</span> by <span *ngFor="let author of entry?.authors" class="highlight">{{author}}</span>
+</div>
+
+<div class="d-flex flex-column mt-4" style="gap: 2rem;">
+  <div 
+    *ngFor="let quote of entry?.quotes; index as i" 
+    class="card p-2 {{(i % 2) ? 'align-self-end' : 'align-self-start'}}" 
+    style="max-width: 500px;"
+    data-aos="fade-up" 
+    data-aos-delay="500"
+  >
+    <div class="fst-italic">
+      "{{quote.text}}"
+    </div>
+    <div class="mt-4">
+      <span *ngFor="let character of quote?.characters" class="highlight">{{character}}</span>
+    </div>
+  </div>
+</div>
