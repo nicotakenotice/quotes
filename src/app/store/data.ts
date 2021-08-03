@@ -12,8 +12,12 @@ export const collection: Entry[] = [
         characters: ['Gavilar Kholin', 'Navani Kholin']
       },
       {
-        text: 'Kaladin immediately burst alight with power. Death had come to visit Hearthstone today, despite Lirin\' every effort.',
+        text: 'Kaladin immediately burst alight with power. Death had come to visit Hearthstone today, despite Lirin\'s every effort.',
         characters: ['Kaladin Stormblessed', 'Lirin']
+      },
+      {
+        text: 'Kaladin envied the way they moved with the winds. They did it naturally, as if they hadn\'t merely claimed the sky - as he had - but had instead been born to it.',
+        characters: ['Kaladin Stormblessed']
       }
     ]
   },
@@ -24,7 +28,11 @@ export const collection: Entry[] = [
     authors: ['SIU'],
     quotes: [
       {
-        text: 'A monster has arrived.'
+        text: 'What do you desire? Money and wealth? Honor and pride? Authority and power? Revenge? Or something that transcends all these? Whatever you desire... is here.'
+      },
+      {
+        text: 'The fear of losing the one he\'s looking for... is swallowing his other fears.',
+        characters: ['Evan Edrock']
       }
     ]
   }
