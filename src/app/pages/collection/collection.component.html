@@ -4,7 +4,12 @@
 </h2>
 
 <div class="grid">
-  <div *ngFor="let entry of collection" class="card gi-12 gi-sm-6 gi-md-4 p-2" routerLink="/collection/{{entry.slug}}">
+  <div 
+    *ngFor="let entry of collection" 
+    class="card gi-12 gi-sm-6 gi-md-4 p-2"
+    data-aos="fade-up" 
+    routerLink="/collection/{{entry.slug}}"
+  >
     <div class="d-flex flex-row align-items-center">
       <div [ngSwitch]="entry.type">
         <i *ngSwitchCase="'book'" class="bi bi-book"></i>
@@ -13,7 +18,7 @@
         <i *ngSwitchCase="'manhwa' || 'manhua'" class="bi bi-journal-arrow-down"></i>
         <i *ngSwitchCase="'anime'" class="bi bi-emoji-laughing"></i>
       </div>
-      <div class="ms-2">{{entry.title}}</div>
+      <div class="fw-bold ms-2">{{entry.title}}</div>
     </div>    
     <div>by <span *ngFor="let author of entry.authors" class="highlight">{{author}}</span></div>
   </div>
