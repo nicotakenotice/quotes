@@ -6,11 +6,10 @@ import { CollectionComponent } from './pages/collection/collection.component';
 import { CollectionEntryComponent } from './pages/collection-entry/collection-entry.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'collection', component: CollectionComponent },
   { path: 'collection/:entrySlug', component: CollectionEntryComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', redirectTo: '/home', pathMatch: 'full' }
+  { path: '**', redirectTo: '/', pathMatch: 'full' }
 ];
 
 @NgModule({
