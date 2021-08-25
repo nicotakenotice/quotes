@@ -1,5 +1,5 @@
 # 📑 Quotes
-Collection of quotes I found interesting while reading/watching.
+Collection of quotes I found interesting while reading.
 
 ## Development server
 Install the dependencies and run a dev server:
