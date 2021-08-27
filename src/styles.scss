@@ -3,6 +3,22 @@ $md: 768px;
 $lg: 992px;
 $xl: 1200px;
 
+$bg-color: #e7dec7;
+$text-color: #5d4232;
+
+body {
+  color: $text-color;
+  background-color: $bg-color;
+}
+.besley-500 {
+  font-family: 'Besley', serif;
+  font-weight: 500;
+}
+.besley-700 {
+  font-family: 'Besley', serif;
+  font-weight: 700;
+}
+
 .center {
   display: grid;
   place-items: center;
