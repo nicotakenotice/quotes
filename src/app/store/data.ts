@@ -17,7 +17,7 @@ export const collection: Entry[] = [
       },
       {
         text: 'Kaladin envied the way they moved with the winds. They did it naturally, as if they hadn\'t merely claimed the sky - as he had - but had instead been born to it.',
-        characters: ['Kaladin Stormblessed']
+        characters: ['Kaladin Stormblessed', 'The Fused']
       }
     ]
   },
