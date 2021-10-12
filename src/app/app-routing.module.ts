@@ -4,11 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { CollectionComponent } from './pages/collection/collection.component';
 import { CollectionEntryComponent } from './pages/collection-entry/collection-entry.component';
+import { SettingsComponent } from './pages/settings/settings.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'collection', component: CollectionComponent },
   { path: 'collection/:entrySlug', component: CollectionEntryComponent },
+  { path: 'settings', component: SettingsComponent },
   { path: '**', redirectTo: '/', pathMatch: 'full' }
 ];
 

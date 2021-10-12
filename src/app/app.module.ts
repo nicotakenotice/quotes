@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CollectionComponent } from './pages/collection/collection.component';
 import { CollectionEntryComponent } from './pages/collection-entry/collection-entry.component';
+import { SettingsComponent } from './pages/settings/settings.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CollectionComponent,
-    CollectionEntryComponent
+    CollectionEntryComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,

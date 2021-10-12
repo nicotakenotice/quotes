@@ -1,20 +1,44 @@
-<header class="sticky-top">
-  <div class="wrapper d-flex flex-row align-items-center py-2">
-    <div>
-      <a routerLink="/"><i class="bi bi-chat-square-quote"></i></a>
-    </div>
-    <div class="ms-auto">
-      <i class="bi bi-moon"></i>
+<div class="flex-grow-1 position-relative">
+  <div class="scroll-box">
+    <div class="wrapper h-100" style="padding: var(--gap);">
+      <router-outlet></router-outlet>
     </div>
   </div>
-</header>
+</div>
 
-<main class="flex-grow-1 overflow-hidden">
-  <div class="wrapper py-2">
-    <router-outlet></router-outlet>
+<!-- ====================================================================== -->
+
+<div style="background-color: var(--bg-color); backdrop-filter: var(--blur);">
+  <div class="wrapper d-flex flex-row align-items-center" style="gap: var(--gap);">
+    <a 
+      routerLink="/" 
+      routerLinkActive="active" 
+      [routerLinkActiveOptions]="{ exact: true }" 
+      class="d-flex flex-column align-items-center"
+    >
+      <div class="menu-highlight"></div>
+      <div class="menu-icon"><i class="bi bi-house"></i></div>
+      <div class="menu-text">Home</div>
+    </a>
+
+    <a 
+      routerLink="/collection" 
+      routerLinkActive="active" 
+      class="d-flex flex-column align-items-center"
+    >
+      <div class="menu-highlight"></div>
+      <div class="menu-icon"><i class="bi bi-grid"></i></div>
+      <div class="menu-text">Collection</div>
+    </a>
+
+    <a 
+      routerLink="/settings" 
+      routerLinkActive="active" 
+      class="d-flex flex-column align-items-center ms-auto"
+    >
+      <div class="menu-highlight"></div>
+      <div class="menu-icon"><i class="bi bi-gear"></i></div>
+      <div class="menu-text">Settings</div>
+    </a>
   </div>
-</main>
-
-<footer class="text-center py-2">
-  &copy; {{currentYear}} <a href="https://github.com/nicotakenotice" target="_blank">@nicotakenotice</a>
-</footer>
+</div>
