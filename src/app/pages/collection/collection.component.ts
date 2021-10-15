@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { collection, Entry } from 'src/app/store';
 
 @Component({
@@ -6,10 +6,6 @@ import { collection, Entry } from 'src/app/store';
   templateUrl: './collection.component.html',
   styleUrls: ['./collection.component.scss']
 })
-export class CollectionComponent implements OnInit {
+export class CollectionComponent {
   collection: Entry[] = collection;
-
-  constructor() { }
-
-  ngOnInit(): void { }
 }

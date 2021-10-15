@@ -1,12 +1,12 @@
-<h2>
-  <i class="bi bi-grid"></i>
-  <span class="ms-2">Collection</span>
-</h2>
+<h1 class="d-flex flex-row"  data-aos="fade">
+  <span>Collection</span>
+  <i class="bi bi-grid ms-auto"></i>
+</h1>
 
-<div class="grid">
+<div class="grid" style="gap: var(--gap);">
   <div 
     *ngFor="let entry of collection" 
-    class="card gi-12 gi-sm-6 gi-md-4 p-2"
+    class="card gi-12 gi-sm-6 gi-md-4"
     routerLink="/collection/{{entry.slug}}"
   >
     <div class="d-flex flex-row align-items-center">
@@ -19,6 +19,6 @@
       </div>
       <div class="fw-bold ms-2">{{entry.title}}</div>
     </div>    
-    <div>by <span *ngFor="let author of entry.authors" class="highlight">{{author}}</span></div>
+    <div>by <span *ngFor="let author of entry.authors" class="tag">{{author}}</span></div>
   </div>
 </div>

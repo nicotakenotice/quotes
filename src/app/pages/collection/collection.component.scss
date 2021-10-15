@@ -1,1 +1,9 @@
 :host { display: block; }
+
+.card { 
+  cursor: pointer; 
+  .d-flex.flex-row { transition: color 0.2s; }
+  &:hover { 
+    .d-flex.flex-row { color: var(--orange); }
+  }
+}
