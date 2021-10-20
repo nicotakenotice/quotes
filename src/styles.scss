@@ -1,110 +1,70 @@
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
+@use "./grid.scss";
 
-$bg-color: #e7dec7;
-$text-color: #5d4232;
+:root {
+  --text-color: rgba(255, 255, 255, 0.8);
+  --bg-color: rgba(0, 0, 0, 0.6);
+  --gap: 10px;
+  --blur: blur(3px);
+  --orange: #e76f51;
+}
+
+/* ========================================================================= */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
+}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.4); border-radius: 4px; }
+
+/* ========================================================================= */
 
 body {
-  color: $text-color;
-  background-color: $bg-color;
+  color: var(--text-color);
+  background-image: url(assets/nature-wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
-.besley-500 {
-  font-family: 'Besley', serif;
-  font-weight: 500;
-}
-.besley-700 {
-  font-family: 'Besley', serif;
-  font-weight: 700;
+a {
+  display: inline-block;
+  color: var(--text-color);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+  &:hover { color: var(--orange); }
 }
 
+/* ========================================================================= */
+
+.scroll-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden auto;
+}
+.wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.card {
+  background-color: var(--bg-color);
+  backdrop-filter: var(--blur);
+  border-radius: var(--gap);
+  padding: var(--gap);
+}
 .center {
   display: grid;
   place-items: center;
 }
-.highlight {
+.tag {
   display: inline-block;
-  padding: 0 4px;
-  margin-right: 4px;
-  background-color: #eeeeee;
-  border-radius: 0.25rem;
-  
-  &:last-of-type { margin-right: 0; }
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 1rem;
-
-  .gi-1 { grid-column: auto / span 1; }
-  .gi-2 { grid-column: auto / span 2; }
-  .gi-3 { grid-column: auto / span 3; }
-  .gi-4 { grid-column: auto / span 4; }
-  .gi-5 { grid-column: auto / span 5; }
-  .gi-6 { grid-column: auto / span 6; }
-  .gi-7 { grid-column: auto / span 7; }
-  .gi-8 { grid-column: auto / span 8; }
-  .gi-9 { grid-column: auto / span 9; }
-  .gi-10 { grid-column: auto / span 10; }
-  .gi-11 { grid-column: auto / span 11; }
-  .gi-12 { grid-column: auto / span 12; }
-
-  @media (min-width: $sm) {
-    .gi-sm-1 { grid-column: auto / span 1; }
-    .gi-sm-2 { grid-column: auto / span 2; }
-    .gi-sm-3 { grid-column: auto / span 3; }
-    .gi-sm-4 { grid-column: auto / span 4; }
-    .gi-sm-5 { grid-column: auto / span 5; }
-    .gi-sm-6 { grid-column: auto / span 6; }
-    .gi-sm-7 { grid-column: auto / span 7; }
-    .gi-sm-8 { grid-column: auto / span 8; }
-    .gi-sm-9 { grid-column: auto / span 9; }
-    .gi-sm-10 { grid-column: auto / span 10; }
-    .gi-sm-11 { grid-column: auto / span 11; }
-    .gi-sm-12 { grid-column: auto / span 12; }
-  } 
-  @media (min-width: $md) {
-    .gi-md-1 { grid-column: auto / span 1; }
-    .gi-md-2 { grid-column: auto / span 2; }
-    .gi-md-3 { grid-column: auto / span 3; }
-    .gi-md-4 { grid-column: auto / span 4; }
-    .gi-md-5 { grid-column: auto / span 5; }
-    .gi-md-6 { grid-column: auto / span 6; }
-    .gi-md-7 { grid-column: auto / span 7; }
-    .gi-md-8 { grid-column: auto / span 8; }
-    .gi-md-9 { grid-column: auto / span 9; }
-    .gi-md-10 { grid-column: auto / span 10; }
-    .gi-md-11 { grid-column: auto / span 11; }
-    .gi-md-12 { grid-column: auto / span 12; }
-  }
-  @media (min-width: $lg) {
-    .gi-lg-1 { grid-column: auto / span 1; }
-    .gi-lg-2 { grid-column: auto / span 2; }
-    .gi-lg-3 { grid-column: auto / span 3; }
-    .gi-lg-4 { grid-column: auto / span 4; }
-    .gi-lg-5 { grid-column: auto / span 5; }
-    .gi-lg-6 { grid-column: auto / span 6; }
-    .gi-lg-7 { grid-column: auto / span 7; }
-    .gi-lg-8 { grid-column: auto / span 8; }
-    .gi-lg-9 { grid-column: auto / span 9; }
-    .gi-lg-10 { grid-column: auto / span 10; }
-    .gi-lg-11 { grid-column: auto / span 11; }
-    .gi-lg-12 { grid-column: auto / span 12; }
-  }
-  @media (min-width: $xl) {
-    .gi-xl-1 { grid-column: auto / span 1; }
-    .gi-xl-2 { grid-column: auto / span 2; }
-    .gi-xl-3 { grid-column: auto / span 3; }
-    .gi-xl-4 { grid-column: auto / span 4; }
-    .gi-xl-5 { grid-column: auto / span 5; }
-    .gi-xl-6 { grid-column: auto / span 6; }
-    .gi-xl-7 { grid-column: auto / span 7; }
-    .gi-xl-8 { grid-column: auto / span 8; }
-    .gi-xl-9 { grid-column: auto / span 9; }
-    .gi-xl-10 { grid-column: auto / span 10; }
-    .gi-xl-11 { grid-column: auto / span 11; }
-    .gi-xl-12 { grid-column: auto / span 12; }
-  }
+  background-color: black;
+  border-radius: var(--gap);
+  padding: 0 8px;
 }
