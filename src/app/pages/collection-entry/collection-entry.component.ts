@@ -14,5 +14,6 @@ export class CollectionEntryComponent implements OnInit {
 
   ngOnInit(): void { 
     this.entry = collection.find(entry => entry.slug === this.route.snapshot.paramMap.get('entrySlug'));
+    console.log(Object.keys(this.entry || {}));
   }
 }
