@@ -35,5 +35,29 @@ export const collection: Entry[] = [
         characters: ['Evan Edrock']
       }
     ]
+  },
+  {
+    type: 'book',
+    slug: 'the-final-empire',
+    title: 'The Final Empire',
+    authors: ['Brandon Sanderson'],
+    quotes: [
+      {
+        text: 'New tastes are like new ideas, young man - the older you get, the more difficult they are for you to stomach.',
+        characters: ['Mennis']
+      },
+      {
+        text: 'I consider myself to be a man of principle. But, what man does not? Even the cutthroat, I have noticed, considers his actions "moral" after a fashion. Perhaps another person, reading of my life, would name me a religious tyrant. He could call me arrogant. What is to make that man\'s opinion any less valid than my own? I guess it all comes down to one fact: in the end, I\'m the one with the armies.',
+        characters: ['Lord Ruler']
+      },
+      {
+        text: 'We\'re thieves, gentlemen - and we\'re extraordinarily good ones. We can rob the unrobbable and fool the unfoolable.',
+        characters: ['Kelsier']
+      },
+      {
+        text: 'You\'ve heard legends and stories. See the man for yourself, and be impressed.',
+        characters: ['Breeze Ladrian']
+      }
+    ]
   }
 ];
