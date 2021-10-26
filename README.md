@@ -1,4 +1,4 @@
-# 📑 Quotes
+# 📑 [Quotes](https://nicotakenotice.github.io/quotes)
 Collection of quotes I found interesting while reading.
 
 ## Development server
