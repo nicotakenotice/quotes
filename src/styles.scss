@@ -5,7 +5,7 @@
   --bg-color: rgba(0, 0, 0, 0.6);
   --gap: 15px;
   --blur: blur(3px);
-  --orange: #e76f51;
+  --accent: #e76f51;
 }
 
 /* ========================================================================= */
@@ -31,7 +31,7 @@ body {
   background-attachment: fixed;
 }
 h1 { 
-  // font-weight: 700;
+  text-shadow: 0 0 2px black; 
   margin-bottom: 0; 
 }
 a {
@@ -40,14 +40,14 @@ a {
   text-decoration: none;
   cursor: pointer;
   transition: color 0.2s;
-  &:hover { color: var(--orange); }
+  &:hover { color: var(--accent); }
 
   &.card {
     outline: 4px solid transparent;
     transition: color 0.2s, outline-color 0.2s;
     &:hover { 
-      color: var(--orange);
-      outline-color: var(--orange); 
+      color: var(--accent);
+      outline-color: var(--accent); 
     }
   }
 }
