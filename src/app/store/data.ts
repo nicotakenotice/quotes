@@ -59,5 +59,31 @@ export const collection: Entry[] = [
         characters: ['Breeze Ladrian']
       }
     ]
-  }
+  },
+  {
+    type: 'book',
+    slug: 'the-well-of-ascension',
+    title: 'The Well of Ascension',
+    authors: ['Brandon Sanderson'],
+    quotes: [
+      {
+        text: 'The Hero of Ages was not simply to be a warrior. He was a person who united others, who brought them together. A leader. He was not royalty himself, but came to it eventually. He commanded the forces of the world. Kings rode to his aid. He left ruin in his wake, but it was forgotten. He created kingdoms, and then destroyed them as he made the world anew.'
+      }
+    ]
+  },
+  {
+    type: 'book',
+    slug: 'the-hero-of-ages',
+    title: 'The Hero of Ages',
+    authors: ['Brandon Sanderson'],
+    quotes: [
+      {
+        text: 'The world was dying. Its gods had to die with it.'
+      },
+      {
+        text: 'Within the embrace of limitless pewter, she seemed to move as the mist itself did. Light. Quick. Unchained.',
+        characters: ['Vin']
+      }
+    ]
+  },
 ];
